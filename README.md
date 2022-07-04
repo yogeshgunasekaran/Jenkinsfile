@@ -31,4 +31,10 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
     - server url 'http ://sonarqube-ip:9000'
     - generate an authentication 'token' from sonarqube
     - Add credentials as secret text with sonarqube token and ID 'MySonarToken'
-    - 
+- In sonarqube server create 'Quality Gate' with required conditions   
+- In sonarqube server click our project-->project settings-->select the Quality Gate
+- In sonarqube server click our project-->project settings-->Webhooks-->Create
+    - Give a name 'jenkins-ci-webhook'
+    - URL 'http ://jenkins-ip-here:8080/sonarqube-webhook'
+- In Jenkins create a new job as 'Pipeline' and paste the Jenkinsfile script in the script section with updated details
+
