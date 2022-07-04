@@ -1,5 +1,4 @@
 # Jenkinsfile
-This repository contains sample Jenkinsfile - a declarative script for pipeline as a code <br> <br>
 What is a ***Jenkinsfile ?***
 - Automate pipeline setup with Jenkinsfile
 - Jenkinsfile defines stages in CI/CD pipeline
@@ -32,10 +31,10 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
 - In Jenkins server - **Global Tool Configuration:**
   - configure sonarqube scanner with name as **sonar4.7**
 - In Jenkins server - **Configure System:** <br>
-  - configure sonarqube server details and integrate it with jenkins as,
-    - checkbox **Environmental variables**
-    - name as **sonar**
-    - server url **http ://sonarqube-ip:9000**
+  - configure sonarqube server details and integrate it with jenkins,
+    - checkbox the **Environmental variables**
+    - add name as **sonar**
+    - add server url **http ://sonarqube-ip:9000**
     - generate an authentication **token** from sonarqube
     - Add credentials as **secret text** with sonarqube token and ID and Description as **MySonarToken**
   - configure Build Timestamp
