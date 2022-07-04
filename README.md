@@ -43,7 +43,7 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
     - choose the required **timezone** and its **pattern** 
   - configure the Slack details and integrate it with jenkins as,
     -  Add Slack **Workspace** name
-    -  In Slack, Add **Jenkins CI** app and select the channel to receive the notifications. Copy the token and save the settings.
+    -  Go to Slack, Add **Jenkins CI** app and select the channel to receive the notifications. Copy the token and save the settings.
     -  Add credentials as **secret text** with **slack token** and ID & Description as **SlackToken**
     -  Add default **channel name** of slack to receive the notifications
     -  Test Connection
