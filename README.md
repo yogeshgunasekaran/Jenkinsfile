@@ -45,7 +45,7 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
     -  Add Slack **Workspace** name
     -  In Slack, Add **Jenkins CI** app and select the channel to receive the notifications. Copy the token and save the settings.
     -  Add credentials as **secret text** with **slack token** and ID & Description as **SlackToken**
-    -  Add default **channel name** of slack 
+    -  Add default **channel name** of slack to receive the notifications
     -  Test Connection
 - In sonarqube server create **Quality Gate** with required **conditions**  
 - In sonarqube server click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
