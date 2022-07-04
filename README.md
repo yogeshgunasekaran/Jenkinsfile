@@ -9,26 +9,26 @@ What is a ***Jenkinsfile ?***
   - Declarative
 
 ## 1. Jenkinsfile_1
-Flow:
+### Flow :
 ```mermaid
 graph LR
-A(fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(checkstyle analysis)
--->E(sonarqube <br> code analysis) -->F(sonarqube <br> quality gate check) -->G(upload artifact to nexus)
--->H(send notification to slack channel)
+A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <br> checkstyle <br> code analysis)
+-->E(sonarqube <br> code analysis) -->F(sonarqube <br> quality gate <br> check) -->G(upload artifact <br> to nexus)
+-->H(send notification <br> to <br> slack channel)
    
 ```
-### Prerequisite
-http://github.com - automatic!
-[GitHub](http://github.com)
-- 2 servers:
-    - jenkins
-    - sonarqube
-- in jenkins **Manage Plugins:**
-  - add sonarqube scanner
-- in jenkins **Global Tool Configuration:**
-  - configure sonarqube scanner with a 'name'
-- in jenkins **Configure System:**
-  - configure the sonarqube server details with,
-    - name
-    - server url
-    - sonarqube server authentication 'token'
+### Steps :
+- Create two servers for: ([Click here for installation and provisioning of the servers](https://github.com/yogeshgunasekaran/Automated-Provisioning-Project-2))
+    - **Jenkins**
+    - **SonarQube**
+- In Jenkins server - **Manage Plugins:**
+  - add sonarqube scanner plugin
+- In Jenkins server - **Global Tool Configuration:**
+  - configure sonarqube scanner with name as 'sonar4.7'
+- In Jenkins server - **Configure System:** <br>
+  configure the sonarqube server details and integrate it with jenkins as,
+    - name 'sonar'
+    - server url 'http ://sonarqube-ip:9000'
+    - generate an authentication 'token' from sonarqube
+    - Add credentials as secret text with sonarqube token and ID 'MySonarToken'
+    - 
