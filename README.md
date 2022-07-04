@@ -37,13 +37,13 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
     - add name as **sonar**
     - add server url **http ://sonarqube-ip:9000**
     - Go to **sonarqube server &rarr; administrator &rarr; Security &rarr; Generate tokens** 
-    - Add credentials as **secret text** with sonarqube token and ID and Description as **MySonarToken**
+    - Add credentials as **secret text** with sonarqube token and ID & Description as **MySonarToken**
   - configure Build Timestamp
     - checkmark **Enable Build Timestamp**
     - choose the required **timezone** and its **pattern** 
   - configure the Slack details and integrate it with jenkins as,
     -  Add Slack **Workspace** name
-    -  Add credentials as **secret text** with **slack token** and ID and Description **SlackToken**
+    -  Add credentials as **secret text** with **slack token** and ID & Description as **SlackToken**
     -  Add default **channel name** of slack 
     -  Test Connection
 - In sonarqube server create **Quality Gate** with required **conditions**  
@@ -54,6 +54,6 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
 - Login to nexus server and **Create repository &rarr; maven2(hosted)** with any name
 - In Jenkins server - **Manage Credentials:**
   - Add credentials as **username and password**
-  - Give the nexus server username and password and **ID nexus-login**
+  - Give the nexus server username and password and ID & Description as **nexus-login**
 - In Jenkins create a new **job** as **Pipeline** and paste the **Jenkinsfile script** in the script section with updated details
 
