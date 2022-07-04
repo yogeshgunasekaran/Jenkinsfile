@@ -25,18 +25,24 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
 - In Jenkins server - **Manage Plugins:**
   - add **SonarQube Scanner** plugin
   - add **Build Timestamp** plugin
+  - add **Slack Notification** plugin
 - In Jenkins server - **Global Tool Configuration:**
   - configure sonarqube scanner with name as **sonar4.7**
 - In Jenkins server - **Configure System:** <br>
-  - configure the sonarqube server details and integrate it with jenkins as,
+  - configure sonarqube server details and integrate it with jenkins as,
     - checkbox **Environmental variables**
     - name as **sonar**
     - server url **http ://sonarqube-ip:9000**
     - generate an authentication **token** from sonarqube
-    - Add credentials as **secret text** with sonarqube token and ID **MySonarToken**
+    - Add credentials as **secret text** with sonarqube token and ID and Description as **MySonarToken**
   - configure Build Timestamp
     - checkmark **Enable Build Timestamp**
     - choose the required **timezone** and its **pattern** 
+  - configure the Slack details and integrate it with jenkins as,
+    -  Add Slack **Workspace** name
+    -  Add credentials as **secret text** with **slack token** and ID and Description **SlackToken**
+    -  Add default **channel name** of slack 
+    -  Test Connection
 - In sonarqube server create **Quality Gate** with required **conditions**  
 - In sonarqube server click our **project-->project settings-->select the Quality Gate** that has been created
 - In sonarqube server click our **project-->project settings-->Webhooks-->Create**
