@@ -8,7 +8,6 @@ What is a ***Jenkinsfile ?***
   - Scripted
   - Declarative
 
-## 1. Jenkinsfile_1
 ### Flow :
 ```mermaid
 graph LR
@@ -18,13 +17,16 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
    
 ```
 ### Steps :
-Keep updating the Jenkinsfile while doing the following steps.
+#### <ins> *Note* </ins>  : Keep updating the Jenkinsfile while doing the following steps.
 - Create three servers for: ([Click here for installation and provisioning of the servers](https://github.com/yogeshgunasekaran/Automated-Provisioning-Project-2))
     - **Jenkins**
     - **SonarQube**
     - **Nexus**
 - In Jenkins server - **Manage Plugins:**
   - add **SonarQube Scanner** plugin
+  - add **Nexus Artifact Uploader** plugin
+  - add **Pipeline Maven Integration** plugin
+  - add **Pipeline Utility Steps** plugin
   - add **Build Timestamp** plugin
   - add **Slack Notification** plugin
 - In Jenkins server - **Global Tool Configuration:**
