@@ -7,7 +7,7 @@ What is a ***Jenkinsfile ?***
   - Scripted
   - Declarative
 
-### Flow :
+### Jenkinsfile flow :
 ```mermaid
 graph LR
 A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <br> checkstyle <br> code analysis)
