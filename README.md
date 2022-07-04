@@ -18,6 +18,7 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
    
 ```
 ### Steps :
+Keep updating the Jenkinsfile while doing the following steps.
 - Create three servers for: ([Click here for installation and provisioning of the servers](https://github.com/yogeshgunasekaran/Automated-Provisioning-Project-2))
     - **Jenkins**
     - **SonarQube**
