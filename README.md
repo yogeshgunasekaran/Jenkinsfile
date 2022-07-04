@@ -1,5 +1,5 @@
 # Jenkinsfile
-What is a ***Jenkinsfile ?***
+What is a ***Jenkinsfile ?***  
 - Automate pipeline setup with Jenkinsfile
 - Jenkinsfile defines stages in CI/CD pipeline
 - Jenkinsfile is a text file with pipeline DSL syntax
@@ -29,13 +29,14 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
   - add **Build Timestamp** plugin
   - add **Slack Notification** plugin
 - In Jenkins server - **Global Tool Configuration:**
-  - configure sonarqube scanner with name as **sonar4.7**
+  - Add **SonarQube Scanner**
+    - configure sonarqube scanner with name as **sonar4.7**
 - In Jenkins server - **Configure System:** <br>
   - configure sonarqube server details and integrate it with jenkins,
     - checkbox the **Environmental variables**
     - add name as **sonar**
     - add server url **http ://sonarqube-ip:9000**
-    - generate an authentication **token** from sonarqube
+    - Go to **sonarqube server &rarr; administrator &rarr; Security &rarr; Generate tokens** 
     - Add credentials as **secret text** with sonarqube token and ID and Description as **MySonarToken**
   - configure Build Timestamp
     - checkmark **Enable Build Timestamp**
@@ -46,11 +47,11 @@ A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(m
     -  Add default **channel name** of slack 
     -  Test Connection
 - In sonarqube server create **Quality Gate** with required **conditions**  
-- In sonarqube server click our **project-->project settings-->select the Quality Gate** that has been created
-- In sonarqube server click our **project-->project settings-->Webhooks-->Create**
+- In sonarqube server click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
+- In sonarqube server click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
     - Give a name **jenkins-ci-webhook**
     - URL **http ://jenkins-ip-here:8080/sonarqube-webhook**
-- Login to nexus server and **Create repository-->maven2(hosted)** with any name
+- Login to nexus server and **Create repository &rarr; maven2(hosted)** with any name
 - In Jenkins server - **Manage Credentials:**
   - Add credentials as **username and password**
   - Give the nexus server username and password and **ID nexus-login**
