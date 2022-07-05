@@ -10,7 +10,7 @@ What is a ***Jenkinsfile ?***
 ### Jenkinsfile flow :
 ```mermaid
 graph LR
-A(fetch code <br> from Git) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <br> checkstyle <br> code analysis)
+A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <br> checkstyle <br> code analysis)
 -->E(sonarqube <br> code analysis) -->F(sonarqube <br> quality gate <br> check) -->G(upload artifact <br> to nexus)
 -->H(send notification <br> to <br> slack channel)
    
