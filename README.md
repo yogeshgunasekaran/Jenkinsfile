@@ -21,6 +21,7 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     - **Jenkins**
     - **SonarQube**
     - **Nexus**
+    
 - In Jenkins server - **Manage Plugins:**
   - add **SonarQube Scanner** plugin
   - add **Nexus Artifact Uploader** plugin
@@ -28,9 +29,15 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
   - add **Pipeline Utility Steps** plugin
   - add **Build Timestamp** plugin
   - add **Slack Notification** plugin
+  
+- In Jenkins - **Manage Credentials:**
+  - Add credentials as **username and password**
+  - Give the nexus server username and password and ID & Description as **nexus-login**
+  
 - In Jenkins - **Global Tool Configuration:**
   - Add **SonarQube Scanner**
     - configure sonarqube scanner with name as **sonar4.7**
+    
 - In Jenkins - **Configure System:** <br>
   - configure sonarqube server details and integrate it with jenkins,
     - checkbox the **Environmental variables**
@@ -47,14 +54,14 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     -  Add credentials as **secret text** with **slack token** and ID & Description as **SlackToken**
     -  Add default **channel name** of slack to receive the notifications
     -  Test Connection
+    
 - In sonarqube create **Quality Gate** with required **conditions**  
 - In sonarqube click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
 - In sonarqube click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
     - Give a name **jenkins-ci-webhook**
     - URL **http ://jenkins-ip-here:8080/sonarqube-webhook**
+    
 - Login to nexus, and **Create repository &rarr; maven2(hosted)** with any name
-- In Jenkins - **Manage Credentials:**
-  - Add credentials as **username and password**
-  - Give the nexus server username and password and ID & Description as **nexus-login**
+
 - In Jenkins, create a new **job** as **Pipeline** and paste the **Jenkinsfile script** in the script section with updated details
 
