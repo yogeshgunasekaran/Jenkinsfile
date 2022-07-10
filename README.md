@@ -68,5 +68,5 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
 - In Nexus, Login as **admin** with password that has been saved in 'jenkins manage credentials' and **Create repository &rarr; maven2(hosted)** with name **vprofile-repo**
 - In Jenkins, now update the same job with **Jenkinsfile_stage4** code and Build the job again 
 - In Nexus, the artifact would have been uploaded after the above job was success
-- In Jenkins, now update the same job with **Jenkinsfile_stage5** code with the slack channel details and Build the job again. This will send **slack notifications** to the **slack channel** in the code. Note, the slack should have been provisioned with jenkins app and API to receive these notifications
+- In Jenkins, now update the same job with **Jenkinsfile_stage5** code with the slack channel details and Build the job again. This will send **slack notifications** to the **slack channel**. Note, the slack should have been provisioned with jenkins app and API to receive these notifications
 
