@@ -63,6 +63,7 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
 - In sonarqube click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
     - Give a name **jenkins-ci-webhook**
     - URL **http ://jenkins-private-ip-here:8080/sonarqube-webhook**
+- In Jenkins, now update the job with **Jenkinsfile_stage3** code and Build the job again 
     
 - Login to nexus, and **Create repository &rarr; maven2(hosted)** with any name
 
