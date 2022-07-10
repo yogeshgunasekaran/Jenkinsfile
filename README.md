@@ -64,9 +64,7 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     - Give a name **jenkins-ci-webhook**
     - URL **http ://jenkins-private-ip-here:8080/sonarqube-webhook**
 - In Jenkins, now update the same job with **Jenkinsfile_stage3** code and Build the job again 
-- Now our project has been build, mvn tested, mvn code analyzed, sonarqube code analyzed, sonarqube quality gate checked. In **SonarQube**, we can see our project code analzyed reports. Next will update the build artifact to the nexus repository 
-    
-- In Nexus, Login as **admin** with password and **Create repository &rarr; maven2(hosted)** with any name
-
-- In Jenkins, create a new **job** as **Pipeline** and paste the **Jenkinsfile script** in the script section with updated details
-
+- Now our project has been build, mvn tested, mvn code analyzed, sonarqube code analyzed, sonarqube quality gate checked. In **SonarQube**, we can see our project code analzyed reports. Next will update the build artifact to the nexus repository   
+- In Nexus, Login as **admin** with password that has been saved in 'jenkins manage credentials' and **Create repository &rarr; maven2(hosted)** with name **vprofile-repo**
+- In Jenkins, now update the same job with **Jenkinsfile_stage4** code and Build the job again 
+- In Nexus, the artifact would have been uploaded after the above job was success
