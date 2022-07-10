@@ -55,9 +55,11 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     -  Add default **channel name** of slack to receive the notifications
     -  Test Connection
     
-- Run the Jenkinsfile upto this stage     
-- In sonarqube create **Quality Gate** with required **conditions**  
-- In sonarqube click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
+- In Jenkins, **New item &rarr; Pipeline**. Run the **Jenkinsfile_stage1** here and build the job    
+- In Jenkins, Update the project **Workspace** generated paths in **Jenkinsfile_stage2**. Build the job again 
+- Now our project has been build, mvn tested, mvn code analyzed, sonarqube code analyzed.   
+- In sonarqube, create **Quality Gate** with required **conditions**  
+- In sonarqube, click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
 - In sonarqube click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
     - Give a name **jenkins-ci-webhook**
     - URL **http ://jenkins-ip-here:8080/sonarqube-webhook**
