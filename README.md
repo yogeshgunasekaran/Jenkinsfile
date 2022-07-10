@@ -42,8 +42,8 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
   - configure sonarqube server details and integrate it with jenkins,
     - checkbox the **Environmental variables**
     - add name as **sonar**
-    - add server url **http ://sonarqube-ip:9000**
-    - Go to **sonarqube server &rarr; administrator &rarr; Security &rarr; Generate tokens** 
+    - add server url **http ://sonarqube-private-ip:9000**
+    - Go to **sonarqube server &rarr; Administrator &rarr; My Account &rarr; Security &rarr; Generate tokens**. Login with default **username: admin** and **password: admin**
     - Add credentials as **secret text** with sonarqube token and ID & Description as **MySonarToken**
   - configure Build Timestamp
     - checkmark **Enable Build Timestamp**
@@ -55,6 +55,7 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     -  Add default **channel name** of slack to receive the notifications
     -  Test Connection
     
+- Run the Jenkinsfile upto this stage     
 - In sonarqube create **Quality Gate** with required **conditions**  
 - In sonarqube click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
 - In sonarqube click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
