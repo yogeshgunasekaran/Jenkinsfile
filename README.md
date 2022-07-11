@@ -57,7 +57,7 @@ A(Git <br> fetch code) -->B(mvn <br> build) -->C(mvn <br> unit test) -->D(mvn <b
     
 - In Jenkins, **New item &rarr; Pipeline**. Run the **Jenkinsfile_stage1** here and build the job    
 - In Jenkins, Get the generated paths from project **Workspace** and update the same job with **Jenkinsfile_stage2** code and Build the job again 
-- Now our project has been build, mvn tested, mvn code analyzed, and default sonarqube code analyzed. In **SonarQube**, we can see our project code analzyed reports  
+- Now our project has been mvn build, mvn tested, mvn code analyzed, and default sonarqube code analyzed. In **SonarQube**, we can see our project code analzyed reports  
 - In sonarqube, create **Quality Gate** with required **conditions**  
 - In sonarqube, click our **project &rarr; project settings &rarr; select the Quality Gate** that has been created
 - In sonarqube click our **project &rarr; project settings &rarr; Webhooks &rarr; Create**
